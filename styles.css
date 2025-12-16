@@ -1,7 +1,16 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
-  color: #404040;
+  color: #2d3436;
   margin: 0;
+  background-color: #f8f9fa;
+  background-image: radial-gradient(
+      at 0% 0%,
+      rgba(148, 128, 228, 0.1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, rgba(90, 216, 247, 0.1) 0px, transparent 50%);
+  min-height: 100vh;
+  text-align: center;
 }
 
 /* =================
@@ -26,13 +35,11 @@ h1 {
    ================= */
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
+  padding: 60px 20px;
   text-align: center;
-  justify-content: center;
   color: #fff;
-  background-color: #9480e4;
+  background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+  margin-bottom: -50px;
 }
 
 /* ====================
@@ -40,14 +47,40 @@ h1 {
    ==================== */
 
 .main-content {
-  text-align: center;
-  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 60px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+h1 strong {
+  font-weight: 900;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0;
-  color: #333;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #636e72;
+  max-width: 500px;
+  margin: 20px auto;
 }
 
 .subheading {
@@ -55,6 +88,16 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
+}
+
+.beta-text {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 50px;
+  display: inline-block;
 }
 
 /* =================
@@ -69,7 +112,8 @@ h2 {
   object-fit: cover;
   border-radius: 50%;
   padding: 8px;
-  border: 4px solid #fff;
+  border: 8px solid #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
 }
 
@@ -110,19 +154,19 @@ h2 {
 }
 
 .style-btn {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  background: white;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 900;
-  transition: 0.2s;
+  border: 2px solid #eee;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #555;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .style-btn:hover {
-  background: #9480e4;
-  color: white;
+  border-color: #9480e4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(148, 128, 228, 0.15);
 }
 
 /*Download button*/
@@ -132,12 +176,10 @@ h2 {
 }
 
 .style-btn.download {
-  background-color: #9480e4;
-  color: white;
-  padding: 15px 30px;
+  background: linear-gradient(135deg, #9480e4 0%, #7a65cf 100%);
   border: none;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 15px rgba(148, 128, 228, 0.4);
+  color: white;
+  border-radius: 12px;
 }
 
 .style-btn.download:hover {
