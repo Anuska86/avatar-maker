@@ -19,15 +19,27 @@
     </section>
 
     <main class="main-content">
-      <img class="img-main" src="images/avatar.png" alt="user avatar." />
+      <img
+        id="avatar-preview"
+        class="img-main style-professional"
+        src="images/avatar.png"
+        alt="user avatar."
+      />
       <h2>Iconicfy me</h2>
-      <span class="subheading">Liven up your profile pic</span>
+      <span class="subheading">Choose your vibe</span>
+
+      <div class="style-options">
+        <button class="style-btn" data-style="style-professional">
+          Professional
+        </button>
+        <button class="style-btn" data-style="style-funny">Funny</button>
+        <button class="style-btn" data-style="style-cyber">Cyberpunk</button>
+      </div>
 
       <p>
-        The sleek and <strong>iconic</strong> avatars are no longer reserved
-        exclusively for the internal design team and elite developers. You can
-        <strong>Iconicfy</strong> your profile today!
+        The sleek and <strong>iconic</strong> avatars are now customizable...
       </p>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
