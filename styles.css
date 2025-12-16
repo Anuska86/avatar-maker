@@ -125,6 +125,26 @@ h2 {
   color: white;
 }
 
+/*Download button*/
+
+.action-container {
+  margin-top: 30px;
+}
+
+.style-btn.download {
+  background-color: #9480e4;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(148, 128, 228, 0.4);
+}
+
+.style-btn.download:hover {
+  background-color: #7a65cf;
+  transform: scale(1.05);
+}
+
 /* =================
     Form
    ================= */
