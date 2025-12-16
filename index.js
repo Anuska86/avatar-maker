@@ -30,3 +30,20 @@ downloadBtn.addEventListener("click", () => {
     link.click();
   });
 });
+
+//Reset button
+
+const resetBtn = document.getElementById("reset-btn");
+
+resetBtn.addEventListener("click", () => {
+  avatarPreview.classList.remove(
+    "style-professional",
+    "style-funny",
+    "style-cyber"
+  );
+
+  avatarPreview.style.transform = "scale(0.95)";
+  setTimeout(() => {
+    avatarPreview.style.transform = "scale(1)";
+  }, 150);
+});
