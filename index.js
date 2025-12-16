@@ -6,13 +6,16 @@ styleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const selectedStyle = button.getAttribute("data-style");
 
-    avatarPreview.classList.remove(
-      "style-professional",
-      "style-funny",
-      "style-cyber"
-    );
+    const classes = avatarPreview.className
+      .split(" ")
+      .filter((c) => !c.startsWith("style-"));
+    avatarPreview.className = classes.join(" ").trim();
 
     avatarPreview.classList.add(selectedStyle);
+
+    if (selectedStyle !== "style-noir") {
+      avatarPreview.style.filter = "none";
+    }
   });
 });
 
@@ -39,7 +42,11 @@ resetBtn.addEventListener("click", () => {
   avatarPreview.classList.remove(
     "style-professional",
     "style-funny",
-    "style-cyber"
+    "style-cyber",
+    "style-sunset",
+    "style-noir",
+    "style-mint",
+    "style-royal"
   );
 
   avatarPreview.style.transform = "scale(0.95)";
