@@ -28,8 +28,8 @@ styleButtons.forEach((button) => {
       avatarPreview.style.objectPosition = "center center";
     } else if (selectedStyle === "style-cat") {
       avatarPreview.style.filter = "brightness(1.02) saturate(1.1)";
-      avatarPreview.style.padding = "80px";
-      avatarPreview.style.objectPosition = "center -20%";
+      avatarPreview.style.padding = "8px";
+      avatarPreview.style.objectPosition = "center center";
     } else if (selectedStyle === "style-noir") {
       avatarPreview.style.filter = "grayscale(100%)";
       avatarPreview.style.padding = "8px";
