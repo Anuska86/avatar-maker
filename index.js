@@ -1,6 +1,7 @@
 const avatarPreview = document.getElementById("avatar-preview");
 const styleButtons = document.querySelectorAll(".style-btn");
 const downloadBtn = document.getElementById("download-btn");
+const resetBtn = document.getElementById("reset-btn");
 
 styleButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -17,7 +18,16 @@ styleButtons.forEach((button) => {
 
     avatarPreview.classList.add(selectedStyle);
 
-    if (selectedStyle !== "style-noir") {
+    if (selectedStyle === "style-monet") {
+      avatarPreview.style.filter =
+        "contrast(0.9) brightness(1.05) sepia(0.1) blur(0.4px)";
+    } else if (selectedStyle === "style-sunshine") {
+      avatarPreview.style.filter = "sepia(0.3) brightness(1.1) saturate(1.3)";
+    } else if (selectedStyle === "style-cat") {
+      avatarPreview.style.filter = "brightness(1.02) saturate(1.1)";
+    } else if (selectedStyle === "style-noir") {
+      avatarPreview.style.filter = "grayscale(100%)";
+    } else {
       avatarPreview.style.filter = "none";
     }
   });
@@ -40,25 +50,17 @@ downloadBtn.addEventListener("click", () => {
 
 //Reset button
 
-const resetBtn = document.getElementById("reset-btn");
-
 resetBtn.addEventListener("click", () => {
-  avatarPreview.classList.remove(
-    "style-professional",
-    "style-funny",
-    "style-cyber",
-    "style-sunset",
-    "style-noir",
-    "style-mint",
-    "style-royal",
-    "style-monet",
-    "style-sunshine",
-    "style-glitch"
-  );
+  const classes = avatarPreview.className
+    .split(" ")
+    .filter((c) => !c.startsWith("style-"));
+  avatarPreview.className = classes.join(" ").trim();
+
+  styleButtons.forEach((btn) => btn.classList.remove("active"));
 
   avatarPreview.style.filter = "none";
-
   avatarPreview.style.transform = "scale(0.95)";
+
   setTimeout(() => {
     avatarPreview.style.transform = "scale(1)";
   }, 150);

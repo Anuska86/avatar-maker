@@ -143,11 +143,37 @@ p {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
 }
 
-/* Sunset*/
-.style-sunset {
-  background: linear-gradient(to bottom, #ff5f6d, #ffc371);
-  box-shadow: 0 10px 25px rgba(255, 95, 109, 0.4);
-  border-color: #fff9f0;
+/* Cat Vibes */
+.style-cat {
+  background-image: url("images/cats.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-color: #fff;
+  background-origin: border-box;
+  object-position: center 20%;
+  border: 8px solid #ffb7b2;
+  box-shadow: 0 10px 25px rgba(255, 183, 178, 0.3);
+}
+
+.style-cat::before,
+.style-cat::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 45px;
+  height: 45px;
+  background-color: #ffb7b2;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: -1;
+}
+.style-cat::before {
+  left: 50px;
+  transform: rotate(-10deg);
+}
+.style-cat::after {
+  right: 50px;
+  transform: rotate(10deg);
 }
 
 /* Noir*/
@@ -174,35 +200,37 @@ p {
 /* Monet */
 
 .style-monet {
-  background: repeating-linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.02) 0px,
-      rgba(0, 0, 0, 0.02) 1px,
+  background-image: repeating-linear-gradient(
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
       transparent 1px,
       transparent 2px
     ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0.02) 0px,
-      rgba(0, 0, 0, 0.02) 1px,
-      transparent 1px,
-      transparent 2px
-    ),
-    linear-gradient(135deg, #7fb3d5, #f7dc6f, #a9dfbf);
+    url("images/monet.png");
 
+  background-size: cover;
+  background-position: center;
   background-blend-mode: overlay;
 
-  filter: sepia(0.2) saturate(1.1) blur(0.4px) contrast(0.9);
+  filter: saturate(1.1) contrast(0.9) blur(0.3px);
 
-  border: 10px double #fcf3cf;
-  box-shadow: 0 12px 35px rgba(127, 179, 213, 0.4);
+  border: 10px double #e6e6fa;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* Sunshine  */
+
 .style-sunshine {
-  background: radial-gradient(circle at 20% 20%, #fff9c4 0%, #ffb300 100%);
-  filter: brightness(1.1) contrast(1.1) saturate(1.3);
-  position: relative;
+  background-image: url("images/sunshine.jpg");
+  background-size: cover;
+  background-position: center;
+
+  background-blend-mode: soft-light;
+
+  filter: brightness(1.1) saturate(1.2) sepia(0.2);
+
+  border: 8px solid #fff9e6;
+  box-shadow: 0 0 30px rgba(255, 179, 0, 0.4);
 }
 
 .style-sunshine::after {
