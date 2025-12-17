@@ -171,6 +171,64 @@ p {
   box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
 }
 
+/* Monet */
+
+.style-monet {
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.02) 0px,
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.02) 0px,
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    linear-gradient(135deg, #7fb3d5, #f7dc6f, #a9dfbf);
+
+  background-blend-mode: overlay;
+
+  filter: sepia(0.2) saturate(1.1) blur(0.4px) contrast(0.9);
+
+  border: 10px double #fcf3cf;
+  box-shadow: 0 12px 35px rgba(127, 179, 213, 0.4);
+}
+
+/* Sunshine  */
+.style-sunshine {
+  background: radial-gradient(circle at 20% 20%, #fff9c4 0%, #ffb300 100%);
+  filter: brightness(1.1) contrast(1.1) saturate(1.3);
+  position: relative;
+}
+
+.style-sunshine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    30deg,
+    rgba(255, 145, 0, 0.2) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Glitch */
+.style-glitch {
+  background: linear-gradient(90deg, #ff00c1, #00fff9);
+  filter: hue-rotate(90deg);
+  box-shadow: 4px 4px 0px #ff00c1, -4px -4px 0px #00fff9;
+  border: 4px solid #fff;
+}
+
 /* =================
     Buttons
    ================= */

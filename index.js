@@ -50,8 +50,13 @@ resetBtn.addEventListener("click", () => {
     "style-sunset",
     "style-noir",
     "style-mint",
-    "style-royal"
+    "style-royal",
+    "style-monet",
+    "style-sunshine",
+    "style-glitch"
   );
+
+  avatarPreview.style.filter = "none";
 
   avatarPreview.style.transform = "scale(0.95)";
   setTimeout(() => {
