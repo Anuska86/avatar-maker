@@ -8,7 +8,6 @@ styleButtons.forEach((button) => {
     const selectedStyle = button.getAttribute("data-style");
 
     styleButtons.forEach((btn) => btn.classList.remove("active"));
-
     button.classList.add("active");
 
     const classes = avatarPreview.className
@@ -21,14 +20,24 @@ styleButtons.forEach((button) => {
     if (selectedStyle === "style-monet") {
       avatarPreview.style.filter =
         "contrast(0.9) brightness(1.05) sepia(0.1) blur(0.4px)";
+      avatarPreview.style.padding = "8px";
+      avatarPreview.style.objectPosition = "center center";
     } else if (selectedStyle === "style-sunshine") {
       avatarPreview.style.filter = "sepia(0.3) brightness(1.1) saturate(1.3)";
+      avatarPreview.style.padding = "8px";
+      avatarPreview.style.objectPosition = "center center";
     } else if (selectedStyle === "style-cat") {
       avatarPreview.style.filter = "brightness(1.02) saturate(1.1)";
+      avatarPreview.style.padding = "80px";
+      avatarPreview.style.objectPosition = "center -20%";
     } else if (selectedStyle === "style-noir") {
       avatarPreview.style.filter = "grayscale(100%)";
+      avatarPreview.style.padding = "8px";
+      avatarPreview.style.objectPosition = "center center";
     } else {
       avatarPreview.style.filter = "none";
+      avatarPreview.style.padding = "8px";
+      avatarPreview.style.objectPosition = "center center";
     }
   });
 });
