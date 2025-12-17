@@ -82,6 +82,14 @@ p {
   margin: 20px auto;
 }
 
+.upload-tip {
+  font-size: 1rem;
+  color: #9480e4;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .subheading {
   display: block;
   text-transform: uppercase;
